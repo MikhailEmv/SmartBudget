@@ -1,0 +1,140 @@
+{% extends 'users/profile/base.html' %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+
+  <div class="feed-title">
+    <a href="{% url 'main' %}" class="home-link">&#8592;На главную</a>
+  </div>
+
+  <div class="user-info">
+      <div class="avatar">
+        <img class="avatar-image" src="/static/images/ava.png"/>
+      </div>
+      <div class="user-name">
+        <h2>Мария Иванова</h2>
+      </div>
+  </div>
+
+  <form method="post">
+    {% csrf_token %}
+    <div class="container">
+      <div id="profile-form">
+        <div class="content-form">
+          <div class="profile-form">
+            <div class="row">
+              <div class="row-item-one">
+                <div class="row-item-one-left">
+                  <label>Email</label>
+                  <input type="text"
+                         class="login"
+                         required placeholder="{{ user }}" readonly>
+                </div>
+                <div class="row-item-two-left">
+                  <label for="id_name">Имя</label>
+                  <input name="name"
+                         id="id_name"
+                         type="text"
+                         class="name"
+                         required placeholder="Имя"
+                         value="{{ form.name.value }}">
+                </div>
+                <div class="row-item-three-left">
+                  <label for="id_surname">Фамилия</label>
+                  <input name="surname"
+                         id="id_surname"
+                         type="text"
+                         class="lastname"
+                         required placeholder="Фамилия"
+                         value="{{ form.surname.value }}">
+                </div>
+                <div class="row-item-four-left">
+                  <label for="id_surname">Отчество</label>
+                  <input name="patronymic"
+                         id="id_patronymic"
+                         type="text"
+                         class="middlename"
+                         required placeholder="Отчество"
+                         value="{{ form.patronymic.value }}">
+                </div>
+              </div>
+              <div class="row-item-two">
+                <div class="row-item-one-right">
+                  <label>Логин</label>
+                  <input type="text" class="login" required placeholder={{ user.username }} readonly>
+                </div>
+                <div class="row-item-two-right">
+                  <label for="id_date_of_birth">Дата рождения</label>
+                  <input name="date_of_birth"
+                         id="id_date_of_birth"
+                         type="date"
+                         class="birthdate"
+                         placeholder="{{ form.date_of_birth.label }}"
+                         value="{{ form.date_of_birth.value|date:'Y-m-d' }}">
+                </div>
+                <div class="row-item-three-right">
+                  <label for="id_phone">Телефон</label>
+                  <input name="phone"
+                         id="id_phone"
+                         type="text"
+                         class="phone"
+                         placeholder="Пример: +78005353535"
+                         value="{{ form.phone.value }}">
+                </div>
+                <div class="row-item-four-right">
+                  <label for="id_sex">Пол</label>
+                  <input name="sex"
+                         id="id_sex"
+                         type="text"
+                         class="sex"
+                         placeholder="Мужской/Женский"
+                         value="{{ form.sex.value }}">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="button-red-title">
+      <button class="button-red" type="submit"><a>Сохранить</a></button>
+    </div>
+  </form>
+
+  {% block footer %}
+    <footer class = "vertical-menu">
+      <div id="footer">
+        <div class="footer-title">
+          <a href="{% url 'main' %}" class="home-link">SmartMoney</a>
+        </div>
+        <div class="list">
+          <ul class="list-menu">
+            <li>
+              <a class="nav-link" href="{% url 'main' %}">Главная</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#">Счета</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#">Статистика</a>
+            </li>
+            <li>
+              <a class="nav-link" href="{% url 'categories' %}">Категории</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#">Настройки</a>
+            </li>
+            <li>
+              {% if user.is_authenticated %}
+                <a class="nav-link" href="{% url 'logout' %}">Выйти</a>
+              {% endif %}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  {% endblock %}
+
+{% endblock %}

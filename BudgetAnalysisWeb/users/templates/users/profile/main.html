@@ -1,0 +1,28 @@
+{% extends 'users/profile/base.html' %}
+
+{% block title %}
+
+    <title>Главная</title>
+
+{% endblock %}
+
+{% block content %}
+
+    <ul>
+        <li>
+            Почта активного пользователя: {{ user }}
+        </li>
+        <li>
+            <a href="{% url 'main' %}">На главную</a>
+        </li>
+        <li>
+            <a href="{% url 'profile' %}">Перейти в профиль</a>
+        </li>
+        <li>
+            {% if user.is_authenticated %}
+                <a href="{% url 'logout' %}">Выйти</a>
+            {% endif %}
+        </li>
+    </ul>
+
+{% endblock %}
