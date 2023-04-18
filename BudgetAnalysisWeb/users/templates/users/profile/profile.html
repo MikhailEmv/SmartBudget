@@ -14,7 +14,9 @@
         <img class="avatar-image" src="/static/images/ava.png"/>
       </div>
       <div class="user-name">
-        <h2>Мария Иванова</h2>
+        <form>
+          <h2>{{ form.name }} {{ form.surname }}</h2>
+        </form>
       </div>
   </div>
 
@@ -122,7 +124,7 @@
               <a class="nav-link" href="#">Статистика</a>
             </li>
             <li>
-              <a class="nav-link" href="{% url 'categories' %}">Категории</a>
+              <a class="nav-link" href="{% url 'category_list' %}">Категории</a>
             </li>
             <li>
               <a class="nav-link" href="#">Настройки</a>

@@ -4,11 +4,11 @@ from django.contrib.auth.views import LoginView
 from django.core.exceptions import ValidationError
 from django.utils.http import urlsafe_base64_decode
 from django.views import View
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.tokens import default_token_generator as \
     token_generator
-from users.forms import AuthenticationForm, UserCreationFormImpl, UserProfileForm
-from users.models import UserDataModel
+from users.forms import AuthenticationForm, UserCreationFormImpl, UserProfileForm, CategoryForm
+from users.models import UserDataModel, CategoryModel
 from users.utils import send_email_for_verify
 
 User = get_user_model()
@@ -94,5 +94,51 @@ def edit_profile_view(request):
     return render(request, 'profile/edit_profile.html', {'form': form})
 
 
-def categories_view(request):
-    return render(request, 'profile/categories.html')
+@login_required
+def category_list(request):
+    categories = CategoryModel.objects.filter(user=request.user)
+    context = {
+        'categories': categories,
+    }
+    return render(request, 'profile/categories/category_list.html', context)
+
+
+@login_required
+def category_create(request):
+    if request.method == 'POST':
+        form = CategoryForm(request.POST, request.FILES)
+        if form.is_valid():
+            category = form.save(commit=False)
+            category.user = request.user
+            category.save()
+            return redirect('category_list')
+    else:
+        form = CategoryForm()
+    context = {
+        'form': form
+    }
+    return render(request, 'profile/categories/category_form.html', context)
+
+
+@login_required
+def category_edit(request, category_id):
+    category = get_object_or_404(CategoryModel, id=category_id, user=request.user)
+    if request.method == 'POST':
+        form = CategoryForm(request.POST, request.FILES, instance=category)
+        if form.is_valid():
+            category = form.save()
+            return redirect('category_list')
+    else:
+        form = CategoryForm(instance=category)
+    context = {
+        'form': form,
+        'category': category
+    }
+    return render(request, 'profile/categories/category_form.html', context)
+
+
+@login_required
+def category_delete(request, category_id):
+    category = get_object_or_404(CategoryModel, id=category_id, user=request.user)
+    category.delete()
+    return redirect('category_list')

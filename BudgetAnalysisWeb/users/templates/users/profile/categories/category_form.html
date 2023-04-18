@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'css/styleCategoryForm.css' %}">
+    <title>Редактирование</title>
+</head>
+<body>
+
+<header>
+      <div id="title"><h1>SmartMoney</h1></div>
+      <div class="search">
+        <h3>
+          <form action="" method="get">
+            <input class="name-search" name="search" placeholder="Поиск" type="search">
+            <input type="image" src="/static/images/search-image.png" class="button-search" name="submit">
+          </form>
+        </h3>
+          <div class="search-line"></div>
+      </div>
+         <div class="notification-profile">
+             <div class="notification-list">
+                <img class="notification-image"  src="/static/images/notification-image.png"/>
+             </div>
+             <div class="profile-list">
+                 <a href="{% url 'profile' %}">
+                    <img class="profile-image" src="/static/images/ava.png"/>
+                 </a>
+             </div>
+         </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{% url 'category_list' %}">Categories</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Create/Edit Category</h1>
+
+
+
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Save</button>
+        </form>
+    </main>
+</body>
+</html>

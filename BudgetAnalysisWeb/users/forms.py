@@ -7,7 +7,7 @@ from django import forms
 from django.core.exceptions import ValidationError
 from django.utils.translation import gettext_lazy as _
 
-from users.models import UserDataModel
+from users.models import UserDataModel, CategoryModel
 from users.utils import send_email_for_verify
 
 User = get_user_model()
@@ -64,3 +64,9 @@ class UserProfileForm(forms.ModelForm):
         if commit:
             user_profile.save()
         return user_profile
+
+
+class CategoryForm(forms.ModelForm):
+    class Meta:
+        model = CategoryModel
+        fields = ('category_name', 'icon')
