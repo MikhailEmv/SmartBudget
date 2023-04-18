@@ -3,9 +3,14 @@
     padding: 0px;
   }
 
+.container{
+    width: 100%;
+    justify-content: center;
+}
 body{
-    justify-content: space-between;
-    overflow: auto;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #title {
@@ -114,8 +119,9 @@ header{
 }
 
 form {
-  position: relative;
-  width: 300px;
+    justify-content: center;
+    margin: 0 auto;
+    width: 300px;
 }
 input {
   border: none;
@@ -142,8 +148,7 @@ input[type='search']{
     justify-content: left;
     list-style-type: none;
     text-decoration: none;
-    margin-left: 350px;
-    top: 50px;
+
 
 }
 
@@ -198,10 +203,12 @@ input[type='search']{
 .profile-form{
     width: 700px;
     height: 550px;
+
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+
 
     margin-left: auto;
     margin-right: auto;
@@ -289,11 +296,9 @@ input[type='search']{
     position: relative;
     display: flex;
 
-
     top: -515px;
     margin-left: auto;
     margin-right: auto;
-
 
     flex-direction: row;
     align-items: center;
