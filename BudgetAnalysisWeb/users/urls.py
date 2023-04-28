@@ -22,8 +22,15 @@ urlpatterns = [
 
     path('', main, name='main'),
     path('profile/', profile_view, name='profile'),
+
     path('categories/', category_list, name='category_list'),
     path('categories/create/', category_create, name='category_create'),
     path('categories/<int:category_id>/edit/', category_edit, name='category_edit'),
     path('categories/<int:category_id>/delete/', category_delete, name='category_delete'),
+
+    path('accounts/', accounts, name='accounts'),
+    path('accounts/create/', create_account, name='create_account'),
+    path('accounts/<int:account_id>/edit/', edit_account, name='edit_account'),
+    path('accounts/delete/<int:account_id>/', delete_account, name='delete_account'),
+    path('transfer/', transfer, name='transfer'),
 ]

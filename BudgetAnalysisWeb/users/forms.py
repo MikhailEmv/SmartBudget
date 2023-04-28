@@ -7,7 +7,7 @@ from django import forms
 from django.core.exceptions import ValidationError
 from django.utils.translation import gettext_lazy as _
 
-from users.models import UserDataModel, CategoryModel
+from users.models import UserDataModel, CategoryModel, Account, Transaction
 from users.utils import send_email_for_verify
 
 User = get_user_model()
@@ -70,3 +70,19 @@ class CategoryForm(forms.ModelForm):
     class Meta:
         model = CategoryModel
         fields = ('category_name', 'icon')
+
+
+class AccountForm(forms.ModelForm):
+    class Meta:
+        model = Account
+        fields = ['name', 'balance', 'icon']
+
+
+class TransactionForm(forms.ModelForm):
+    class Meta:
+        model = Transaction
+        fields = ['from_account', 'to_account', 'amount', 'date', 'comment']
+
+        widgets = {
+            'date': forms.DateInput(attrs={'type': 'date'}),
+        }

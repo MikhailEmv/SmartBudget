@@ -5,9 +5,6 @@
 
 {% block content %}
 
-<!--  <div class="feed-title">-->
-<!--    <a href="{% url 'main' %}" class="home-link">&#8592;На главную</a>-->
-<!--  </div>-->
 <div class="container">
   <div class="user-info">
       <div class="avatar">
@@ -118,7 +115,7 @@
               <a class="nav-link" href="{% url 'main' %}">Главная</a>
             </li>
             <li>
-              <a class="nav-link" href="#">Счета</a>
+              <a class="nav-link" href="{% url 'accounts' %}">Счета</a>
             </li>
             <li>
               <a class="nav-link" href="#">Статистика</a>

@@ -3,7 +3,7 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.admin import UserAdmin
 
 from users.forms import UserCreationFormImpl
-from users.models import UserDataModel, CategoryModel
+from users.models import UserDataModel, CategoryModel, Account, Transaction
 
 User = get_user_model()
 
@@ -28,3 +28,7 @@ class UserProfileAdmin(admin.ModelAdmin):
 admin.site.register(UserDataModel, UserProfileAdmin)
 
 admin.site.register(CategoryModel)
+
+admin.site.register(Account)
+
+admin.site.register(Transaction)

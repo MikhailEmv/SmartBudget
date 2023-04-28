@@ -4,11 +4,12 @@ from django.conf import settings
 from django.contrib.auth.models import AbstractUser
 from django.core.files import File
 from django.db import models
-from django.dispatch import receiver
+from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 from django.db.models.signals import post_save
 
 from BudgetAnalysisWeb.settings import AUTH_USER_MODEL
+from users.validators import positive_number_validator
 
 
 class User(AbstractUser):
@@ -33,11 +34,39 @@ class UserDataModel(models.Model):
     phone = models.CharField(max_length=20, blank=True)
     sex = models.CharField(max_length=30, blank=True)
 
+    def __str__(self):
+        return f"{self.name}: {self.user}"
+
 
 class CategoryModel(models.Model):
     user = models.ForeignKey(AUTH_USER_MODEL, on_delete=models.CASCADE)
     category_name = models.CharField(max_length=100, blank=True)
     icon = models.ImageField(upload_to='users/static/images/')
+
+    def __str__(self):
+        return f"{self.category_name}: {self.user}"
+
+
+class Account(models.Model):
+    user = models.ForeignKey(AUTH_USER_MODEL, on_delete=models.CASCADE)
+    name = models.CharField(max_length=50)
+    balance = models.DecimalField(max_digits=10, decimal_places=2)
+    icon = models.ImageField(upload_to='users/static/images/', null=True, blank=True)
+
+    def __str__(self):
+        return f"{self.name}"
+
+
+class Transaction(models.Model):
+    user = models.ForeignKey(AUTH_USER_MODEL, on_delete=models.CASCADE)
+    from_account = models.ForeignKey(Account, on_delete=models.CASCADE, related_name='sent_transactions')
+    to_account = models.ForeignKey(Account, on_delete=models.CASCADE, related_name='received_transactions')
+    amount = models.DecimalField(max_digits=10, decimal_places=2, validators=[positive_number_validator])
+    date = models.DateField(default=timezone.now, editable=True)
+    comment = models.CharField(max_length=200, null=True, blank=True)
+
+    def __str__(self):
+        return f"{self.from_account} -> {self.to_account}: {self.amount}"
 
 
 def create_default_categories(sender, instance, created, **kwargs):
