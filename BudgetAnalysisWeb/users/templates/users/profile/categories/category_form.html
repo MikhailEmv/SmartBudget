@@ -8,7 +8,8 @@
 <body>
 
 <header>
-      <div id="title"><h1>SmartMoney</h1></div>
+    <div id="title"><h1>SmartMoney</h1></div>
+    <div class="column-profile-notifications">
       <div class="search">
         <h3>
           <form action="" method="get">
@@ -16,19 +17,21 @@
             <input type="image" src="/static/images/search-image.png" class="button-search" name="submit">
           </form>
         </h3>
-          <div class="search-line"></div>
+        <div class="search-line"></div>
       </div>
-         <div class="notification-profile">
-             <div class="notification-list">
-                <img class="notification-image"  src="/static/images/notification-image.png"/>
-             </div>
-             <div class="profile-list">
-                 <a href="{% url 'profile' %}">
-                    <img class="profile-image" src="/static/images/ava.png"/>
-                 </a>
-             </div>
-         </div>
-    </header>
+      <div class="noti-profile">
+        <div class="notification-list">
+          <img class="notification-image"  src="/static/images/notification-image.png"/>
+        </div>
+        <div class="profile-list">
+          <a href="{% url 'profile' %}">
+            <img class="profile-image" src="/static/images/ava.png"/>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
     <nav>
         <ul>
             <li><a href="{% url 'category_list' %}">Categories</a></li>
