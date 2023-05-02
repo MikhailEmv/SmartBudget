@@ -9,22 +9,35 @@
 {% endblock %}
 
 {% block content %}
-        <main>
-        {% if categories %}
-        <ul>
-            {% for category in categories %}
+    <main>
+    {% if categories %}
+    <ul>
+        <h1>Расходы</h1>
+        {% for category in categories %}
+            {% if category.key == 'Расходы' %}
             <li>
                 <p>{{ category.category_name }}</p>
                 <img src="{{ category.icon.url }}" width="50" height="50">
                 <a href="{% url 'category_edit' category.id %}">Изменить</a>
                 <a href="{% url 'category_delete' category.id %}">Удалить</a>
             </li>
-            {% endfor %}
-        </ul>
-        {% else %}
-            <p>Еще нет категорий</p>
-        {% endif %}
-        </main>
-{% block footer %}
-{% endblock %}
+            {% endif %}
+        {% endfor %}
+        <h1>Доходы</h1>
+        {% for category in categories %}
+            {% if category.key == 'Доходы' %}
+            <li>
+                <p>{{ category.category_name }}</p>
+                <img src="{{ category.icon.url }}" width="50" height="50">
+                <a href="{% url 'category_edit' category.id %}">Изменить</a>
+                <a href="{% url 'category_delete' category.id %}">Удалить</a>
+            </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    {% else %}
+        <p>Категорий нет. Создайте</p>
+    {% endif %}
+        <a href="{% url 'category_create' %}">Создайте собственную категорию</a>
+    </main>
 {% endblock %}

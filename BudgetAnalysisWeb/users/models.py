@@ -13,7 +13,6 @@ from users.validators import positive_number_validator
 
 
 class User(AbstractUser):
-
     email = models.EmailField(
         _('email address'),
         unique=True,
@@ -41,6 +40,7 @@ class UserDataModel(models.Model):
 class CategoryModel(models.Model):
     user = models.ForeignKey(AUTH_USER_MODEL, on_delete=models.CASCADE)
     category_name = models.CharField(max_length=100, blank=True)
+    key = models.CharField(max_length=100, blank=True)
     icon = models.ImageField(upload_to='users/static/images/')
 
     def __str__(self):
@@ -51,7 +51,7 @@ class Account(models.Model):
     user = models.ForeignKey(AUTH_USER_MODEL, on_delete=models.CASCADE)
     name = models.CharField(max_length=50)
     balance = models.DecimalField(max_digits=10, decimal_places=2)
-    icon = models.ImageField(upload_to='users/static/images/', null=True, blank=True)
+    icon = models.ImageField(upload_to='users/static/images/')
 
     def __str__(self):
         return f"{self.name}"
@@ -72,15 +72,36 @@ class Transaction(models.Model):
 def create_default_categories(sender, instance, created, **kwargs):
     if created:
         if CategoryModel.objects.filter(user=instance).count() == 0:
-            default_categories = [
-                {'name': 'Продукты', 'icon': 'users/static/images/icon1.jpeg'},
-                {'name': 'Транспорт', 'icon': 'users/static/images/icon2.jpeg'},
-                {'name': 'Переводы', 'icon': 'users/static/images/icon3.jpeg'},
-                {'name': 'Одежда и обувь', 'icon': 'users/static/images/icon4.jpeg'},
-                {'name': 'Интернет и связь', 'icon': 'users/static/images/icon5.jpeg'},
+            default_categories_expenses = [
+                {'name': 'Кафе и рестораны', 'icon': 'users/static/images/icon1.jpeg'},
+                {'name': 'Одежда и аксессуары', 'icon': 'users/static/images/icon2.jpeg'},
+                {'name': 'Красота и здоровье', 'icon': 'users/static/images/icon3.jpeg'},
+                {'name': 'Продукты', 'icon': 'users/static/images/icon4.jpeg'},
+                {'name': 'Все для дома', 'icon': 'users/static/images/icon5.jpeg'},
+                {'name': 'Транспорт', 'icon': 'users/static/images/icon1.jpeg'},
+                {'name': 'Развлечения', 'icon': 'users/static/images/icon2.jpeg'},
+                {'name': 'Обязательные платежи', 'icon': 'users/static/images/icon3.jpeg'},
+                {'name': 'Переводы', 'icon': 'users/static/images/icon4.jpeg'},
+                {'name': 'Другое', 'icon': 'users/static/images/icon5.jpeg'}
             ]
-            for category_data in default_categories:
-                category = CategoryModel(user=instance, category_name=category_data['name'])
+            default_categories_revenues = [
+                {'name': 'Зарплата', 'icon': 'users/static/images/icon1.jpeg'},
+                {'name': 'Стипендия', 'icon': 'users/static/images/icon2.jpeg'},
+                {'name': 'Социальные выплаты', 'icon': 'users/static/images/icon3.jpeg'},
+                {'name': 'Проценты по вкладу', 'icon': 'users/static/images/icon4.jpeg'},
+                {'name': 'Переводы', 'icon': 'users/static/images/icon5.jpeg'},
+                {'name': 'Другое', 'icon': 'users/static/images/icon5.jpeg'}
+            ]
+
+            for category_data in default_categories_expenses:
+                category = CategoryModel(user=instance, category_name=category_data['name'], key='Расходы')
+                icon_path = os.path.join(settings.MEDIA_ROOT, category_data['icon'])
+                with open(icon_path, 'rb') as f:
+                    category.icon.save(os.path.basename(icon_path), File(f), save=True)
+                category.save()
+
+            for category_data in default_categories_revenues:
+                category = CategoryModel(user=instance, category_name=category_data['name'], key='Доходы')
                 icon_path = os.path.join(settings.MEDIA_ROOT, category_data['icon'])
                 with open(icon_path, 'rb') as f:
                     category.icon.save(os.path.basename(icon_path), File(f), save=True)

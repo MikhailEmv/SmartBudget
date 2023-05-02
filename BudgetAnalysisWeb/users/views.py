@@ -9,7 +9,7 @@ from django.contrib.auth.tokens import default_token_generator as \
     token_generator
 from users.forms import AuthenticationForm, UserCreationFormImpl, UserProfileForm, CategoryForm, TransactionForm, \
     AccountForm
-from users.models import UserDataModel, CategoryModel, Account, Transaction
+from users.models import UserDataModel, CategoryModel, Account
 from users.utils import send_email_for_verify
 
 User = get_user_model()
