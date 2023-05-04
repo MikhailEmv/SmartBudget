@@ -9,6 +9,7 @@
 {% endblock %}
 
 {% block content %}
+<div class="f-block">
   <ul>
     {% for account in accounts %}
       <li>{{ account.name }}: {{ account.balance }} RUB</li>
@@ -16,8 +17,19 @@
       <a href="{% url 'delete_account' account.id %}">Удалить</a>
     {% endfor %}
   </ul>
-  <a href="{% url 'create_account' %}">Добавить счет</a><br>
-  <a href="{% url 'transfer' %}">Перевод</a>
+
+    <div class="button-blocks">
+        <a class="transfer-button" href="{% url 'transfer' %}">
+          <img class="transfer-img" src="/static/images/Iconarrows-accounts.png"/>
+          <div class="transfer-title">Перевод между счетами</div>
+        </a>
+        <a class="add-account-button" href="{% url 'create_account' %}">Добавить счет</a><br>
+    </div>
+    <div class="accounts-block">
+
+    </div>
+</div>
+
 {% block footer %}
 {% endblock %}
 {% endblock %}

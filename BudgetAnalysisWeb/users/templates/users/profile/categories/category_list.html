@@ -9,35 +9,49 @@
 {% endblock %}
 
 {% block content %}
-    <main>
+<div class="f-block">
+    <main class="categories-main">
     {% if categories %}
-    <ul>
-        <h1>Расходы</h1>
+    <ul class="categories-forms">
+        <h5>Категории расходов</h5>
         {% for category in categories %}
             {% if category.key == 'Расходы' %}
-            <li>
-                <p>{{ category.category_name }}</p>
-                <img src="{{ category.icon.url }}" width="50" height="50">
-                <a href="{% url 'category_edit' category.id %}">Изменить</a>
-                <a href="{% url 'category_delete' category.id %}">Удалить</a>
+            <li class="categories-forms">
+                <a href="{% url 'category_edit' category.id %}"><img class="cat-option-title" src="/static/images/Icon-refactor.png"></a>
+                <a href="{% url 'category_delete' category.id %}"><img class="cat-option-title" src="/static/images/Icontrash-icon.png"></a>
+                <img class="img-cat" src="{{ category.icon.url }}" width="50" height="50">
+                <p class="cat-title">{{ category.category_name }}</p>
             </li>
             {% endif %}
         {% endfor %}
-        <h1>Доходы</h1>
+        <li class="create-link">
+            <a class="create-link" href="{% url 'category_create' %}">
+                <img class="plus" src="/static/images/Maskplus.png">
+            </a>
+        </li>
+        <h5>Категории доходов</h5>
         {% for category in categories %}
             {% if category.key == 'Доходы' %}
-            <li>
-                <p>{{ category.category_name }}</p>
-                <img src="{{ category.icon.url }}" width="50" height="50">
-                <a href="{% url 'category_edit' category.id %}">Изменить</a>
-                <a href="{% url 'category_delete' category.id %}">Удалить</a>
+            <li class="categories-forms">
+                <a href="{% url 'category_edit' category.id %}"><img class="cat-option-title" src="/static/images/Icon-refactor.png"></a>
+                <a href="{% url 'category_delete' category.id %}"><img class="cat-option-title" src="/static/images/Icontrash-icon.png"></a>
+                <img class="img-cat" src="{{ category.icon.url }}" width="50" height="50">
+                <p class="cat-title">{{ category.category_name }}</p>
             </li>
             {% endif %}
         {% endfor %}
+        <li class="create-link">
+            <a class="create-link" href="{% url 'category_create' %}">
+                <img class="plus" src="/static/images/Maskplus.png">
+            </a>
+        </li>
     </ul>
     {% else %}
         <p>Категорий нет. Создайте</p>
     {% endif %}
-        <a href="{% url 'category_create' %}">Создайте собственную категорию</a>
+<!--        <a class="create-link" href="{% url 'category_create' %}">Создать</a>-->
     </main>
+</div>
 {% endblock %}
+{% block footer %}
+  {% endblock %}

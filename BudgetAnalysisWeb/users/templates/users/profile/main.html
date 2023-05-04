@@ -49,8 +49,21 @@
 
     <div class="f-block">
       <div class="name-blocks">
-          <div class="name-categories"><div class="title-container">Остаток на выбранный период (месяц)</div></div>
+              <select class="name-categories">
+                  <option>Все счета</option>
+                  <option>Зарплатная карта</option>
+                  <option>Кредитная карта</option>
+                  <option>Тинькофф</option>
+              </select>
           <div class="add-operation">Добавить операцию</div>
+              <select class="period-choice">
+                  <option>Месяц</option>
+                  <option>День</option>
+                  <option>Неделя</option>
+                  <option>Год</option>
+              </select>
+          <input type="date" class="start-period" name="calendar">
+          <input type="date" class="end-period" name="calendar">
       </div>
     <div class="block-left">
 

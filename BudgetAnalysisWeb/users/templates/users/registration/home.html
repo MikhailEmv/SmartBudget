@@ -9,11 +9,11 @@
   <hr>
 
   <ul>
+<!--    <li>-->
+<!--      Активный пользователь: {{ user }}-->
+<!--    </li>-->
     <li>
-      Активный пользователь: {{ user }}
-    </li>
-    <li>
-      <a href="{% url 'home' %}">На главную</a>
+      <a href="{% url 'main' %}">Главная</a>
     </li>
   </ul>
   {% if user.is_authenticated %}
