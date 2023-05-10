@@ -38,9 +38,15 @@ class UserDataModel(models.Model):
 
 
 class CategoryModel(models.Model):
+    EXPENSES = 'Расходы'
+    INCOME = 'Доходы'
+    CATEGORY_TYPE_CHOICES = (
+        (EXPENSES, 'Расходы'),
+        (INCOME, 'Доходы'),
+    )
     user = models.ForeignKey(AUTH_USER_MODEL, on_delete=models.CASCADE)
     category_name = models.CharField(max_length=100, blank=True)
-    key = models.CharField(max_length=100, blank=True)
+    key = models.CharField(max_length=100, choices=CATEGORY_TYPE_CHOICES, default=EXPENSES, blank=True)
     icon = models.ImageField(upload_to='users/static/images/')
 
     def __str__(self):

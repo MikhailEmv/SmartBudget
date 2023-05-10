@@ -5,40 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19f7b74e-7761-4d3b-bba0-0dc0125f7963" name="Changes" comment="Добавила base.css для Счетов и Категорий, сделала шаблон главной и переделала Профиль пользователя">
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/Baseplus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/Icon-refactor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/Iconarrows-accounts.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/Icontrash-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/Maskplus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/dorime.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/dorime_korixap.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/dorime_sFtDMHt.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon1_1OHHQz6.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon1_UhlbnoC.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon1_bdoIMIy.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon2_ISDV7wX.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon2_NHHbGx3.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon2_niZ9E22.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon3_9tixSPC.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon3_KT7wJQH.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon3_mycKwBn.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon4_GUpSAsa.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon4_HLgmsSP.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon4_HiktMl6.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon5_9MwxWPo.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon5_FKfSDme.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon5_OyjnV8S.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon5_WPKpksq.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/migrations/0002_alter_categorymodel_key.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon1_G8tOvCh.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon1_TGlaeYT.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon1_aQXrhzj.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon2_FXiWHK2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon2_J1kvlhS.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon2_rbvX8m8.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon3_21awI6o.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon3_ai834pL.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon3_zpEkJIL.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon4_Cqixhvn.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon4_H2djZoV.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon4_UQhFv7R.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon5_3JV348S.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon5_6q7vQKw.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon5_hFrCh9l.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon5_lNZ9DK5.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/Снимок_экрана_12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/Снимок_экрана_13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/Снимок_экрана_14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/Снимок_экрана_14_uX76O7R.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/Снимок_экрана_14_yuiWEnF.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/Снимок_экрана_15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/Снимок_экрана_15_YfI3DVx.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/Снимок_экрана_22.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/Снимок_экрана_8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/Снимок_экрана_9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/Снимок_экрана_9_CbL1cmh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/Снимок_экрана_9_ZrCHqid.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BudgetAnalysisWeb/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/css/styleAccounts.css" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/css/styleAccounts.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/css/styleCategory.css" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/css/styleCategory.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/css/styleMain.css" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/css/styleMain.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetAnalysisWeb/users/templates/users/profile/accounts/accounts.html" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/templates/users/profile/accounts/accounts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetAnalysisWeb/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetAnalysisWeb/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BudgetAnalysisWeb/users/templates/users/profile/categories/category_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/templates/users/profile/categories/category_form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BudgetAnalysisWeb/users/templates/users/profile/categories/category_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/templates/users/profile/categories/category_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetAnalysisWeb/users/templates/users/profile/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/templates/users/profile/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetAnalysisWeb/users/templates/users/registration/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/templates/users/registration/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetAnalysisWeb/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetAnalysisWeb/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

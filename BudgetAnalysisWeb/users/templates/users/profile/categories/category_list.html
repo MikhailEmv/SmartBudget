@@ -11,47 +11,46 @@
 {% block content %}
 <div class="f-block">
     <main class="categories-main">
-    {% if categories %}
-    <ul class="categories-forms">
-        <h5>Категории расходов</h5>
-        {% for category in categories %}
-            {% if category.key == 'Расходы' %}
-            <li class="categories-forms">
-                <a href="{% url 'category_edit' category.id %}"><img class="cat-option-title" src="/static/images/Icon-refactor.png"></a>
-                <a href="{% url 'category_delete' category.id %}"><img class="cat-option-title" src="/static/images/Icontrash-icon.png"></a>
-                <img class="img-cat" src="{{ category.icon.url }}" width="50" height="50">
-                <p class="cat-title">{{ category.category_name }}</p>
+        {% if categories %}
+        <ul class="categories-forms">
+            <h5>Расходы</h5>
+            {% for category in categories %}
+                {% if category.key == 'Расходы' %}
+                <li class="categories-forms">
+                    <img class="img-cat" src="{{ category.icon.url }}" width="50" height="50">
+                    <a href="{% url 'category_edit' category.id %}"><img class="cat-option-title" src="/static/images/Icon-refactor.png"></a>
+                    <a href="{% url 'category_delete' category.id %}"><img class="cat-option-title" src="/static/images/Icontrash-icon.png"></a>
+                    <p class="cat-title">{{ category.category_name }}</p>
+                </li>
+                {% endif %}
+            {% endfor %}
+            <li class="create-link">
+                <a class="create-link" href="{% url 'category_create' %}">
+                    <img class="plus" src="/static/images/Maskplus.png">
+                </a>
             </li>
-            {% endif %}
-        {% endfor %}
-        <li class="create-link">
-            <a class="create-link" href="{% url 'category_create' %}">
-                <img class="plus" src="/static/images/Maskplus.png">
-            </a>
-        </li>
-        <h5>Категории доходов</h5>
-        {% for category in categories %}
-            {% if category.key == 'Доходы' %}
-            <li class="categories-forms">
-                <a href="{% url 'category_edit' category.id %}"><img class="cat-option-title" src="/static/images/Icon-refactor.png"></a>
-                <a href="{% url 'category_delete' category.id %}"><img class="cat-option-title" src="/static/images/Icontrash-icon.png"></a>
-                <img class="img-cat" src="{{ category.icon.url }}" width="50" height="50">
-                <p class="cat-title">{{ category.category_name }}</p>
+            <h5>Доходы</h5>
+            {% for category in categories %}
+                {% if category.key == 'Доходы' %}
+                <li class="categories-forms">
+                    <img class="img-cat" src="{{ category.icon.url }}" width="50" height="50">
+                    <a href="{% url 'category_edit' category.id %}"><img class="cat-option-title" src="/static/images/Icon-refactor.png"></a>
+                    <a href="{% url 'category_delete' category.id %}"><img class="cat-option-title" src="/static/images/Icontrash-icon.png"></a>
+                    <p class="cat-title">{{ category.category_name }}</p>
+                </li>
+                {% endif %}
+            {% endfor %}
+            <li class="create-link">
+                <a class="create-link" href="{% url 'category_create' %}">
+                    <img class="plus" src="/static/images/Maskplus.png">
+                </a>
             </li>
-            {% endif %}
-        {% endfor %}
-        <li class="create-link">
-            <a class="create-link" href="{% url 'category_create' %}">
-                <img class="plus" src="/static/images/Maskplus.png">
-            </a>
-        </li>
-    </ul>
-    {% else %}
-        <p>Категорий нет. Создайте</p>
-    {% endif %}
-<!--        <a class="create-link" href="{% url 'category_create' %}">Создать</a>-->
+        </ul>
+        {% else %}
+            <p>Еще нет категорий</p>
+        {% endif %}
     </main>
 </div>
 {% endblock %}
 {% block footer %}
-  {% endblock %}
+{% endblock %}

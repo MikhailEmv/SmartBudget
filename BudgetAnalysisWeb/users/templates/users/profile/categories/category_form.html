@@ -10,15 +10,13 @@
 
 {% block content %}
     <main>
-        <h1>Create/Edit Category</h1>
-
-
+        <h1>Создание/редактирование категории</h1>
         <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form.as_p }}
-            <button type="submit">Save</button>
+            <button type="submit">Сохранить</button>
         </form>
     </main>
 {% endblock %}
 {% block footer %}
-  {% endblock %}
+{% endblock %}

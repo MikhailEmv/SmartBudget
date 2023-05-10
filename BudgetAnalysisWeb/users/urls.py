@@ -32,5 +32,6 @@ urlpatterns = [
     path('accounts/create/', create_account, name='create_account'),
     path('accounts/<int:account_id>/edit/', edit_account, name='edit_account'),
     path('accounts/delete/<int:account_id>/', delete_account, name='delete_account'),
+
     path('transfer/', transfer, name='transfer'),
 ]

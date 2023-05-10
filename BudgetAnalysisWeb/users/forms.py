@@ -69,7 +69,7 @@ class UserProfileForm(forms.ModelForm):
 class CategoryForm(forms.ModelForm):
     class Meta:
         model = CategoryModel
-        fields = ('category_name', 'icon')
+        fields = ('category_name', 'key', 'icon')
 
 
 class AccountForm(forms.ModelForm):

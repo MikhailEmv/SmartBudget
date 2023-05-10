@@ -152,7 +152,7 @@ def accounts(request):
 
 def create_account(request):
     if request.method == 'POST':
-        form = AccountForm(request.POST)
+        form = AccountForm(request.POST, request.FILES)
         if form.is_valid():
             account = form.save(commit=False)
             account.user = request.user
