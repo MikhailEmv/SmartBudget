@@ -4,44 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19f7b74e-7761-4d3b-bba0-0dc0125f7963" name="Changes" comment="Добавила base.css для Счетов и Категорий, сделала шаблон главной и переделала Профиль пользователя">
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/migrations/0002_alter_categorymodel_key.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon1_G8tOvCh.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon1_TGlaeYT.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon1_aQXrhzj.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon2_FXiWHK2.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon2_J1kvlhS.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon2_rbvX8m8.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon3_21awI6o.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon3_ai834pL.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon3_zpEkJIL.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon4_Cqixhvn.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon4_H2djZoV.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon4_UQhFv7R.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon5_3JV348S.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon5_6q7vQKw.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon5_hFrCh9l.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/icon5_lNZ9DK5.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/Снимок_экрана_12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/Снимок_экрана_13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/Снимок_экрана_14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/Снимок_экрана_14_uX76O7R.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/Снимок_экрана_14_yuiWEnF.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/Снимок_экрана_15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/Снимок_экрана_15_YfI3DVx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/Снимок_экрана_22.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/Снимок_экрана_8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/Снимок_экрана_9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/Снимок_экрана_9_CbL1cmh.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/static/images/Снимок_экрана_9_ZrCHqid.png" afterDir="false" />
+    <list default="true" id="19f7b74e-7761-4d3b-bba0-0dc0125f7963" name="Changes" comment="Little changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetAnalysisWeb/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetAnalysisWeb/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetAnalysisWeb/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetAnalysisWeb/users/templates/users/profile/categories/category_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/templates/users/profile/categories/category_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetAnalysisWeb/users/templates/users/profile/categories/category_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/templates/users/profile/categories/category_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetAnalysisWeb/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetAnalysisWeb/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetAnalysisWeb/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,6 +100,14 @@
       <workItem from="1682692467246" duration="22662000" />
       <workItem from="1683138142914" duration="6583000" />
     </task>
+    <task id="LOCAL-00001" summary="Little changes">
+      <created>1683749576580</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683749576580</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,5 +126,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Little changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Little changes" />
   </component>
 </project>
